@@ -1,0 +1,91 @@
+<html><head>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+<script type="text/javascript">
+function initialize() {
+var cpoint = new google.maps.LatLng(37.484456 ,126.953668 );
+var mapOptions = {
+zoom: 15,
+center: cpoint,
+mapTypeId: google.maps.MapTypeId.ROADMAP
+};
+var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+var infowindow = new google.maps.InfoWindow();
+var info1 = '<iframe style="width:400px;height:300px" src="infopages/place1.html">';
+var point1 = new google.maps.LatLng(37.477317 ,126.960173 );
+var marker1 = new google.maps.Marker({
+position: point1 ,
+icon: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png',
+map: map,
+title: "Click here for details"
+});
+google.maps.event.addListener(marker1 , "click", function() {
+infowindow.setContent(info1 );
+infowindow.open(map,marker1 );
+});
+var info2 = '<iframe style="width:400px;height:300px" src="infopages/place2.html">';
+var point2 = new google.maps.LatLng(37.477759 ,126.960563 );
+var marker2 = new google.maps.Marker({
+position: point2 ,
+icon: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png',
+map: map,
+title: "Click here for details"
+});
+google.maps.event.addListener(marker2 , "click", function() {
+infowindow.setContent(info2 );
+infowindow.open(map,marker2 );
+});
+var info3 = '<iframe style="width:400px;height:300px" src="infopages/place3.html">';
+var point3 = new google.maps.LatLng(37.476526 ,126.961509 );
+var marker3 = new google.maps.Marker({
+position: point3 ,
+icon: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png',
+map: map,
+title: "Click here for details"
+});
+google.maps.event.addListener(marker3 , "click", function() {
+infowindow.setContent(info3 );
+infowindow.open(map,marker3 );
+});
+var info4 = '<iframe style="width:400px;height:300px" src="infopages/place4.html">';
+var point4 = new google.maps.LatLng(37.476836 ,126.959520 );
+var marker4 = new google.maps.Marker({
+position: point4 ,
+icon: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png',
+map: map,
+title: "Click here for details"
+});
+google.maps.event.addListener(marker4 , "click", function() {
+infowindow.setContent(info4 );
+infowindow.open(map,marker4 );
+});
+var info5 = '<iframe style="width:400px;height:300px" src="infopages/place5.html">';
+var point5 = new google.maps.LatLng(37.492386 ,126.945827 );
+var marker5 = new google.maps.Marker({
+position: point5 ,
+icon: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png',
+map: map,
+title: "Click here for details"
+});
+google.maps.event.addListener(marker5 , "click", function() {
+infowindow.setContent(info5 );
+infowindow.open(map,marker5 );
+});
+var info6 = '<iframe style="width:400px;height:300px" src="infopages/place6.html">';
+var point6 = new google.maps.LatLng(37.482699 ,126.951138 );
+var marker6 = new google.maps.Marker({
+position: point6 ,
+icon: 'http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png',
+map: map,
+title: "Click here for details"
+});
+google.maps.event.addListener(marker6 , "click", function() {
+infowindow.setContent(info6 );
+infowindow.open(map,marker6 );
+});
+}
+google.maps.event.addDomListener(window, "load", initialize);
+</script>
+<h3>공시지가 300% 이상 상승 지역(2012년 기준)</h3>
+<p>Click on a <img src="http://maps.google.com/intl/en_us/mapfiles/ms/micons/green.png" style="margin:-15px auto -5px auto"> marker to view information about this location.</p>
+<div id="map-canvas" style="width:50%; height:70%; border: 2px solid #3872ac;">x</div>
+</body></html>
